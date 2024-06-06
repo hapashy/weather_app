@@ -22,7 +22,7 @@ class WeatherInfoBody extends StatelessWidget {
               style: TextStyle(fontSize: 25),
             ),
             SizedBox(
-              height: 40,
+              height: 32,
             ),
             Padding(
               padding: EdgeInsets.all(10),
@@ -57,7 +57,7 @@ class WeatherInfoBody extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 35,
+              height: 32,
             ),
             Text(
               'Ligh Rain',

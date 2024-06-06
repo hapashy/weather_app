@@ -22,19 +22,20 @@ class SearchView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextFormField(
+              onFieldSubmitted: (value){
+                  
+              },
               decoration: const InputDecoration(
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 32, horizontal: 16),
                   suffixIcon: Icon(Icons.search),
                   border: OutlineInputBorder(
-                    
                     borderSide: BorderSide(
                       color: Color.fromARGB(255, 238, 160, 43),
                     ),
-                    
-                    
                   ),
                   labelText: 'Search',
                   hintText: 'Enter City Name'),
-                  
             ),
           ],
         ),
