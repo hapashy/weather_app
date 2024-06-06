@@ -21,8 +21,8 @@ class SearchView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextFormField(
-              onFieldSubmitted: (value){
+            TextField(
+              onSubmitted: (value){
                   
               },
               decoration: const InputDecoration(
