@@ -32,24 +32,27 @@ class WeatherInfoBody extends StatelessWidget {
                     image: AssetImage('assets/images/cloudy.png'),
                   ),
                   SizedBox(
-                    width: 100,
+                    width: 80,
                   ),
                   Text(
                     '17',
-                    style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+                    style:
+                        TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
-                    width: 100,
+                    width: 80,
                   ),
                   Column(
                     children: [
                       Text(
                         'MaxTemp: 24',
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(
+                            fontSize: 13, fontWeight: FontWeight.bold),
                       ),
                       Text(
                         ' MainTemp: 16',
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(
+                            fontSize: 13, fontWeight: FontWeight.bold),
                       )
                     ],
                   ),
