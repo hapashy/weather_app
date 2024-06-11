@@ -3,26 +3,30 @@ import 'package:weather_app/views/search_view.dart';
 import 'package:weather_app/widget/no_weather_body.dart';
 import 'package:weather_app/widget/weather_info_body.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         actions: [
           IconButton(
-  onPressed: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const SearchView()), 
-    );
-  },
-  icon: const Icon(
-    Icons.search,
-    color: Colors.white,
-  )
-)
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SearchView()),
+                );
+              },
+              icon: const Icon(
+                Icons.search,
+                color: Colors.white,
+              ))
         ],
         backgroundColor: Colors.blue,
         title: const Text(
@@ -30,7 +34,9 @@ class HomeView extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         ),
       ),
-      body: const NoWeatherBody(),
+      body: weatherModel == null 
+      ? const NoWeatherBody() 
+      : const WeatherInfoBody(),
     );
   }
 }
