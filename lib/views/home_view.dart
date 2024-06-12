@@ -34,9 +34,7 @@ class _HomeViewState extends State<HomeView> {
           style: TextStyle(color: Colors.white),
         ),
       ),
-      body: weatherModel == null 
-      ? const NoWeatherBody() 
-      : const WeatherInfoBody(),
+      body: const NoWeatherBody(),
     );
   }
 }
